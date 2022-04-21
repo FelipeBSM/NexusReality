@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
+}
+#tuto-plane-cointainer{
+    position: fixed;
+    background-color: rgba(100, 100, 100, .8);
+    height: 100%;
+    width:100%;
+    left:0;
+    top:0;
+    z-index: 10; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tuto-plane-insider{
+
+    width:70%;
+    height:60%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 5px 8px rgb(46, 46, 46);
+    border-radius: 16px;
+    background-color: rgba(50, 50, 50, 1);
+}
+#tuto-plane-insider h2{
+
+   padding: 3rem;
+   text-transform: uppercase;
+   color: wheat;
+   font-size: 35px;
+}
+#tuto-plane-insider h3{
+
+    text-transform: uppercase;
+    color: rgb(100, 100, 100);
+    font-size: 30px;
+ }
+ #tuto-plane-insider #i1 p{
+    padding: 2rem;
+    text-transform:uppercase;
+    color: wheat;
+    font-size: 20px;
+ }
+ #tuto-plane-insider #i2 p{
+    padding: .8rem;
+    text-transform:uppercase;
+    color: wheat;
+    font-size: 20px;
+ }
+#button-containers{
+    display: inline-block;
+    padding: 10px;
+}
+.btn{
+     color:wheat;
+     text-transform: uppercase;
+     background-color: transparent;
+     font-weight: 400;
+     
+     border-radius: 20px;
+     padding-left:5%;
+     padding-right: 5%;
+     padding-top: 1%;
+     padding-bottom: 1%;
+ }
+ 
+.btn:hover{
+    cursor:pointer;
+    background-color: wheat;
+    font-weight: 500;
+    color:rgb(46, 46, 46);
+}
+#embedded-scene{
+    position: fixed;
+    height: 100%;
+    width:100%;
+    left:0;
+    top:0;
+    z-index: -10;
+    
+
+}
+#i2{
+    display: none;
+}
+.order-images{
+    display: inline-block;
+    justify-content: space-between;
+
+}
+.order-images img{
+    width: 20%;
+    height: 20%;
+}
+
+a-scene {
+    height: 100%;
+    width: 100%;
+  } 
+  /*MEDIAS*/
+  
+  
+
+  @media (max-width: 400px) {
+    #tuto-plane-insider h2{
+
+        padding: 3rem;
+        text-transform: uppercase;
+        color: wheat;
+        font-size: 25px;
+        
+     }
+     #tuto-plane-insider h3{
+     
+         text-transform: uppercase;
+         color: rgb(100, 100, 100);
+         font-size: 20px;
+      }
+      #tuto-plane-insider #i1 p{
+         padding: 1rem;
+         text-transform:uppercase;
+         color: #f5deb3;
+         font-size: 10px;
+      }
+      #tuto-plane-insider #i2 p{
+        padding: 1rem;
+        text-transform:uppercase;
+        color: #f5deb3;
+        font-size: 10px;
+     }
+  }
