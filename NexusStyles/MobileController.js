@@ -28,9 +28,9 @@ AFRAME.registerComponent('user-control',{
 
         let cam = document.getElementById("cam");
         let pos = cam.getAttribute('position');
-
-        pos.x+=movement.x;
-        pos.z+=movement.z;
+        var speed = 0.1;
+        pos.x+=movement.x * speed;
+        pos.z+=movement.z * speed;
         
         cam.setAttribute('poisition',pos);
     },
