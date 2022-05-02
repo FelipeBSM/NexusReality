@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+   <meta charset="utf-8"/>
+   
+   <!--This is only a test with a-frame-->
+   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+   <link rel="stylesheet" href="NexusStyles/main_style.css" />
+
+  <head>
+    <title>Nexus | Building_Test_Scene</title>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+  </head>
+  <body>
+    
+    <div id="tuto-plane-cointainer">
+      <div id="tuto-plane-insider">
+        <div id="i1">
+          <h2>Bem vindo ao seu Nexus!</h2>
+          <h3>Veja seu futuro na sua frente<h3>
+          <p>Siga as próximas etapas ou pule as ilustrações para inciar sua expreiência.</p>
+        </div>
+
+        <div id="i2">
+          <div class="left-content">
+            <div class="removable">
+              <p>Use as teclas ilustradas abaixo para movimentar-se dentro do ambiente.</p>
+            </div>
+            
+            <div class="order-images removable">
+              <img src="Modelos/wasd_info.png"/>
+              <img src="Modelos/arrow_info.png"/>
+            </div>
+            
+          </div>
+          <div class="right-content">
+            <div class="removable">
+              <p>Use o mouse para rotacionar sua visão, conforme ilustrado abaixo.</p>
+            </div>
+            
+            <div class="order-images removable" >
+              <img src="Modelos/mouse_info.png"/>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="button-container">
+          <button id="btn-next"class="btn">próximo</button>
+          <button id="btn-jump"class="btn">pular</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="mobile-input-container">
+      <div id="front-btn-container">
+        <img id="front-btn" class="button-mobile" src="Modelos/mobileInput.png"/>
+      </div>
+    </div>
+    <div id="embedded-scene-">
+      <a-scene id="m-s" user-control loading-screen="dotsColor: red; backgroundColor: black; enabled: true;" vr-mode-ui="enabled: false;" renderer="alpha: true; logarithmicDepthBuffer: true;">
+        <a-entity id="cam" id="rig" position="-4.8 1.5 2" rotation="0 -90 0">
+          <a-entity camera wasd-controls look-controls></a-entity>
+        </a-entity>
+
+        <a-assets>
+          <a-asset-item id="modelo" src="Modelos/AP_MODELS_GLTF/tudo_junto_final_talvez_2_teste.glb"></a-asset-item>
+
+          <img id="sky" src="Modelos/sky360.jpg">
+
+          
+        </a-assets>
+      
+        <a-entity gltf-model="#modelo" position="0 0 0" ></a-entity>
+        
+       
+        <a-sky src="#sky" rotation="0 90 0"></a-sky>
+       
+      </a-scene>  
+    </div>
+    
+    <script src="NexusStyles/NexusTestJS.js"></script>
+
+    
+  </body>
+</html>
