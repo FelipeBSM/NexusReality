@@ -58,13 +58,13 @@
       </div>
     </div>
     <div id="embedded-scene-">
-      <a-scene id="m-s" user-control loading-screen="dotsColor: red; backgroundColor: black; enabled: true;" vr-mode-ui="enabled: false;" renderer="alpha: true; logarithmicDepthBuffer: true;">
+      <a-scene id="m-s" embedded user-control loading-screen="dotsColor: red; backgroundColor: black; enabled: true;" vr-mode-ui="enabled: false;" renderer="alpha: true; logarithmicDepthBuffer: true;">
         <a-entity id="cam" id="rig" position="-4.8 1.5 2" rotation="0 -90 0">
           <a-entity camera wasd-controls look-controls></a-entity>
         </a-entity>
 
         <a-assets>
-          <a-asset-item id="modelo" src="Modelos/AP_MODELS_GLTF/tudo_junto_final_talvez_2_teste.glb"></a-asset-item>
+          <a-asset-item id="modelo" src="Modelos/AP_MODELS_GLTF/HDR_AP_CR_2.glb"></a-asset-item>
 
           <img id="sky" src="Modelos/sky360.jpg">
 
@@ -73,8 +73,10 @@
       
         <a-entity gltf-model="#modelo" position="0 0 0" ></a-entity>
         
-       
-        <a-sky src="#sky" rotation="0 90 0"></a-sky>
+        <a-entity light="type: ambient; color: #BBB; intensity: 3.0"></a-entity>
+        <a-entity light="type: directional; color: #BBB; intensity: 1.0" position="-0.5 1 1"></a-entity>
+
+        <a-sky src="#sky" rotation="0 170 0"></a-sky>
        
       </a-scene>  
     </div>
